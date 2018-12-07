@@ -1,0 +1,37 @@
+<!--
+  Generated template for the ProductoPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title style="background-color: rgb(188, 89, 7)" >Vehículo</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding style="background-color: #FFC2C2">
+
+<ion-card>
+  <img [src]=producto.imagen/>
+  <ion-card-content>
+    <ion-card-title>
+      {{producto.nombre}}
+      </ion-card-title>
+     <h2>{{producto.fecha}}</h2> 
+     <h3>${{producto.precio}}</h3>
+     <h6>{{producto.vend}}</h6>
+  </ion-card-content>
+</ion-card>
+
+
+</ion-content>
+
+<ion-footer>
+    <ion-toolbar>
+      <button ion-button block color="dark" (click)="agregarClick()"> Agregar </button>
+    </ion-toolbar>
+  </ion-footer>

@@ -1,0 +1,23 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title style="background-color: rgb(188, 89, 7)">Registro</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding style="background-color: #FFC2C2">
+    <ion-list>
+      <ion-item>
+        <ion-input [(ngModel)]="correo" placeholder="correo"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="password" [(ngModel)]="contra" placeholder="contraseña"></ion-input>
+ 
+      </ion-item>
+    </ion-list>
+  
+    <button ion-button block color= "dark" (click)="clickRegistro()">Registrarse</button>
+  </ion-content>
