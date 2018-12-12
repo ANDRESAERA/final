@@ -38,7 +38,7 @@ export class HomePage {
     let index = this.usuarios.findIndex(u => u.correo == this.correo && u.contra == this.contra);
 
     if (index >= 0) {
-      this.navCtrl.push(this.principal, {carr: this.usuarios[index].cart})
+      this.navCtrl.push(this.principal, {carr: this.usuarios[index].cart, usuarios:this.usuarios})
     }
     else {
       const alerta = this.alert.create({

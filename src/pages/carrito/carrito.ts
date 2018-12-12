@@ -18,7 +18,7 @@ export class CarritoPage {
   carro;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    this.carro=this.navParams.get('carr');
+    this.carro=this.navParams.get('carrito');
   }
 
   ionViewDidLoad() {

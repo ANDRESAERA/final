@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, AlertController, NavController, NavParams } from 'ionic-angular';
+import { Storage } from '@ionic/storage';
 
 
 
@@ -12,11 +13,13 @@ export class ProductoPage {
  
   producto;
   carrito;
+  usuarios;
 
 
-  constructor(public navCtrl: NavController, public alert: AlertController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public alert: AlertController, public navParams: NavParams, public storage: Storage) {
   this.producto = this.navParams.get('producto');
-  this.carrito=this.navParams.get('carr');
+  this.carrito=this.navParams.get('carrito');
+  this.usuarios=this.navParams.get('usuarios');
   }
 
   ionViewDidLoad() {
@@ -31,12 +34,13 @@ export class ProductoPage {
     });
     alerta.present();
 
-    this.carrito.push(
-      this.producto
-    );
-
+    this.carrito.push(this.producto);
+    this.storage.set('usuarios', JSON.stringify(this.usuarios));
 
     this.navCtrl.pop();
   }
+
+
+
 
 }

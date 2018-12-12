@@ -3,12 +3,6 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ProductoPage } from '../producto/producto';
 import { CarritoPage } from '../carrito/carrito';
 
-/**
- * Generated class for the PrincipalPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @IonicPage()
 @Component({
@@ -273,9 +267,12 @@ export class PrincipalPage {
 
 carrito=[];
 
+usuarios=[];
+
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
         this.carrito=this.navParams.get('carr');
+        this.usuarios=this.navParams.get('usuarios');
   }
 
   ionViewDidLoad() {
@@ -283,12 +280,12 @@ carrito=[];
   }
 
   productoClick(p){
-        this.navCtrl.push(this.producto, {producto:p, carrito:this.carrito});
+        this.navCtrl.push(this.producto, {producto:p, carrito:this.carrito, usuarios:this.usuarios});
 
   }
 
   carritoClick(){
-        this.navCtrl.push(this.car, {cart:this.carrito});
+        this.navCtrl.push(this.car, {carrito:this.carrito});
   }
 
 }

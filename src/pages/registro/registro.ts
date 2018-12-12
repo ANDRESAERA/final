@@ -26,7 +26,7 @@ export class RegistroPage {
     this.usuarios.push({
       correo: this.correo,
       contra: this.contra,
-      cart:this.car,
+      cart: this.car,
     });
     this.storage.set('usuarios', JSON.stringify(this.usuarios));
     this.navCtrl.pop();
